@@ -1,6 +1,8 @@
 {
     "name": "PlayerAD",
-    "references": [],
+    "references": [
+        "GUID:5444b860190997540a5d815d9cd1427c"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

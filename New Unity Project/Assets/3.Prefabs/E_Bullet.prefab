@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 266522196002795338}
   - component: {fileID: 7975772552340495602}
-  - component: {fileID: 7760446897189219797}
   - component: {fileID: 1051014577063186012}
   - component: {fileID: -9006371648793850928}
-  m_Layer: 9
-  m_Name: Bullet
+  - component: {fileID: -470374828969920483}
+  m_Layer: 10
+  m_Name: E_Bullet
   m_TagString: BULLET
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,20 +51,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7760446897189219797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7417212985930026266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f310dbad4b3ef84bbb7ea4da9f165a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
-  speed: 1000
 --- !u!135 &1051014577063186012
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -73,7 +59,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7417212985930026266}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
@@ -202,6 +188,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!75 &-470374828969920483
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417212985930026266}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 100}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1001 &8172475915075315701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,10 +210,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f3be3666e308d450f8cc9ad434580302, type: 3}
       propertyPath: m_Name
       value: lowpolybullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f3be3666e308d450f8cc9ad434580302, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3be3666e308d450f8cc9ad434580302, type: 3}
       propertyPath: m_LocalPosition.x

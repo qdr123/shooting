@@ -1,3 +1,15 @@
-﻿{
-	"name": "NewAssembly"
+{
+    "name": "StageAD",
+    "references": [
+        "GUID:5444b860190997540a5d815d9cd1427c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
