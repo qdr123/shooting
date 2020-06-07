@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 8751043145151627395}
   - component: {fileID: 8751043145151627394}
   - component: {fileID: 8751043145151627422}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: ENEMY
   m_Icon: {fileID: 0}
@@ -681,6 +681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859dc57f355bf0f4f970d65011f88296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpBarPrefab: {fileID: 2568359919171396297, guid: 3ca3d2c78042947409458eaddd7ee831,
+    type: 3}
+  hpBarOffset: {x: 0, y: 2.2, z: 0}
 --- !u!1001 &8751043144703111661
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class EnemyFire : MonoBehaviour
 {
 
     //AudioSource 컴포넌트를 저장할 변수
-    private AudioSource audio;
+    //private AudioSource audio;
     //Animator 컴포넌트를 저장할 변수
     private Animator animator;
     //주인공 캐릭터의 Transform 컴포넌트
@@ -52,7 +52,7 @@ public class EnemyFire : MonoBehaviour
         playerTr = GameObject.FindGameObjectWithTag("PLAYER").GetComponent<Transform>();
         enemyTr = GetComponent<Transform>();
         animator = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
+       // audio = GetComponent<AudioSource>();
 
         wsReload = new WaitForSeconds(reloadTime);
     }
@@ -80,7 +80,7 @@ public class EnemyFire : MonoBehaviour
     void Fire()
     {
         animator.SetTrigger(hashFire);
-        audio.PlayOneShot(fireSfx, 1.0f);
+        //audio.PlayOneShot(fireSfx, 1.0f);
 
         //총구 화염 효과 코루틴 호출
         StartCoroutine(ShowMuzzleFlash());
@@ -128,7 +128,7 @@ public class EnemyFire : MonoBehaviour
         //재장전 애니메이션 실핼
         animator.SetTrigger(hashReload);
         //재장전 사운드 발생
-        audio.PlayOneShot(reloadSfx, 1.0f);
+       // audio.PlayOneShot(reloadSfx, 1.0f);
 
         //재장전 시간만큼 대기하는 동안 제어권 양보
         yield return wsReload;

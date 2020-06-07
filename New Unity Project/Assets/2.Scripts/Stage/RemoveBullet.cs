@@ -1,4 +1,4 @@
-﻿using System;
+﻿//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,8 +17,8 @@ public class RemoveBullet : MonoBehaviour
             //스파크 효과 함수 호출
             showEffect(coll);
             //충돌한 게임오브젝트 삭제
-            Destroy(coll.gameObject);
-            
+            //Destroy(coll.gameObject);
+            coll.gameObject.SetActive(false);
 
         }
     }
